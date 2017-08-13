@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lostad.app.demo" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 二维码 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:logo="@mipmap/logo"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${CHANNEL_NAME}" />
+
+        <activity
+            android:name=".view.WelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lostad.app.base.view.component.FormAddressActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".view.MainActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.zxing.view.CaptureActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".view.FindPwd0Activity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.FindPwd1Activity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.my.FormMyInfoActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <activity
+            android:name=".view.ResetpwdActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".view.Register1Activity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".view.Register0Activity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".view.LoginActivity"
+
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.my.ListMyTourActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.article.FreshNewsDetailActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.DrawerActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+       <!--  能用组件 -->
+        <activity
+            android:name="com.lostad.app.base.view.component.FormTextActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="com.lostad.app.base.view.component.FormNumActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="com.lostad.app.base.view.component.FormTextChinaeseActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="com.lostad.app.base.view.component.FormDateActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="com.lostad.app.base.view.component.CommonBrowserActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="com.lostad.app.base.view.component.ImagePagerActivity"
+            android:parentActivityName="com.lostad.app.base.view.BaseActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+
+    </application>
+
+</manifest>

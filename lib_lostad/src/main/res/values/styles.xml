@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <!--no actionbar and title-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- menu-->
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/red</item>
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">@color/red</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@color/background</item>
+        <!-- 抽屉菜单效果 -->
+        <item name="drawerArrowStyle">@style/AppTheme.JDDrawerArrowStyle</item>
+
+    </style>
+
+    <style name="MenuTextStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.JDDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <!--是否开启导航图标的旋转效果-->
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+
+    <!-- ToolBar -->
+    <style name="myToolBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+</resources>
